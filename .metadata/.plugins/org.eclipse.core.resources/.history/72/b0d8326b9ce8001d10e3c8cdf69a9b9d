@@ -1,0 +1,9 @@
+package com.example.demo.Day_6;
+
+import org.testng.annotations.Test;
+
+public class Day-7 {
+  @Test
+  public void f() {
+  }
+}

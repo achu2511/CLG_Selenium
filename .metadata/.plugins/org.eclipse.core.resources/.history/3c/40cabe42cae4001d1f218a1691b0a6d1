@@ -1,0 +1,18 @@
+package com.example.demo.Day_6;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeTest;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class t3 {
+	WebDriver driver;
+	@BeforeTest
+	public void Before() {
+		WebDriverManager.edgedriver().setup();
+		 driver=new EdgeDriver();
+		
+	}
+	@Test
+}

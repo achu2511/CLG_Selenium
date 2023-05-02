@@ -1,0 +1,10 @@
+package com.example.demo.Day_7;
+
+import org.junit.Test;
+
+public class NewTest {
+  @Test
+  public void f() {
+	  
+  }
+}

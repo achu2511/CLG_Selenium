@@ -1,0 +1,25 @@
+package com.example.demo.Day_7;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+import org.testng.annotations.DataProvider;
+
+public class second {
+  @Test(dataProvider = "dp")
+  public void f(String n, String s) {
+	  String actual=n; 
+	  Assert.assertEquals(s, actual);
+  }
+
+  @DataProvider
+  public Object[][] dp() {
+	  WebDriverManager.edgedriver().setup();
+    return new Object[][] {
+      new Object[] { 1, "a" },
+//      new Object[] { 2, "b" },
+    };
+  }
+}

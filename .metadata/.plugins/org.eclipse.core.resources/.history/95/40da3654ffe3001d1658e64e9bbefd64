@@ -1,0 +1,29 @@
+package com.example.demo.Day_5;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class three {
+	public static void main(String[]args) {
+		WebDriverManager.edgedriver().setup();
+        WebDriver driver=new EdgeDriver();
+        driver.get("https://demo.guru99.com/test/delete_customer.php");
+        driver.findElement(By.xpath("/html/body/form/table/tbody/tr[2]/td[2]/input")).sendKeys("401");
+        WebElement btn=driver.findElement(By.xpath("/html/body/form/table/tbody/tr[3]/td[2]/input[1]"));
+        btn.click();
+        driver.switchTo().alert().accept();
+        driver.switchTo().alert().accept();
+        driver.get("https://demo.guru99.com/test/delete_customer.php");
+        driver.findElement(By.xpath("/html/body/form/table/tbody/tr[2]/td[2]/input")).sendKeys("402");
+//        WebElement btn=driver.findElement(By.xpath("/html/body/form/table/tbody/tr[3]/td[2]/input[1]"));
+        btn.click();
+        driver.switchTo().alert().accept();
+        driver.switchTo().alert().accept();
+        
+        
+	}
+}

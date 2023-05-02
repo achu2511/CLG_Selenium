@@ -1,0 +1,37 @@
+package com.example.demo.Day_6;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class calculatort2 {
+	@Test
+	public void add(int a,int b) {
+		int c=a+b;
+		Assert.assertEquals(c, 7);
+
+	}
+	@Test
+	public void sub(int a,int b) {
+		int c=a-b;
+		Assert.assertEquals(c, 3);
+	}
+	@Test
+	public void mul(int a,int b) {
+		int c=a*b;
+		Assert.assertEquals(c, 10);
+		
+	}
+	@Test
+	public void div(int a,int b) {
+		int c=a/b;
+		Assert.assertEquals(c, 2);
+	}
+	
+	public static void main(String[]args) {
+		calculatort2 obj=new calculatort2();
+		obj.add(5, 2);
+		obj.sub(5, 2);
+		obj.mul(5, 2);
+		obj.div(5, 2);
+	}
+}

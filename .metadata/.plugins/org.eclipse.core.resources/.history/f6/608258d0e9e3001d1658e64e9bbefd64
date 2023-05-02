@@ -1,0 +1,20 @@
+package com.example.demo.Day_5;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        WebDriverManager.edgedriver().setup();
+        WebDriver driver=new EdgeDriver();
+        driver.get("public static void main(String[]args)");
+    }
+}

@@ -1,0 +1,7 @@
+package com.example.demo.Day_6;
+
+public class calc {
+	public int add(int a,int b ) {
+
+
+}

@@ -1,0 +1,33 @@
+package com.example.demo.Day_7;
+
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.DataProvider;
+
+public class second {
+	WebDriver driver;
+  @Test(dataProvider = "dp")
+  public void f(String n, String s) {
+	  String actual=n; 
+	  Assert.assertEquals(s, actual);
+  }
+
+  @DataProvider
+  public Object[][] dp() {
+	  WebDriverManager.edgedriver().setup();
+	  driver=new EdgeDriver();
+	  driver.get("https://www.godaddy.com/en-in");
+	  driver.manage().window().maximize();
+	  String str=driver.getTitle();
+	  String f=driver.getCurrentUrl();
+    return new Object[][] {
+      new Object[] { f, "https://www.godaddy.com/en-in" },
+//      new Object[] { 2, "b" },
+    };
+  }
+}

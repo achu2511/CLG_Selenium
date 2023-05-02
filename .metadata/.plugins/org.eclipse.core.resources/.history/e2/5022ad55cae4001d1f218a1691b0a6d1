@@ -1,0 +1,23 @@
+package com.example.demo.Day_6;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class t3 {
+	WebDriver driver;
+	@BeforeTest
+	public void Before() {
+		WebDriverManager.edgedriver().setup();
+		 driver=new EdgeDriver();
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+	}
+	@Test
+	public void TC_001() {
+	  
+	}
+}
